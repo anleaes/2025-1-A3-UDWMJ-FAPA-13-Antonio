@@ -1,0 +1,10 @@
+arapp/__pycache__/*
+/apps/principais/__pycache__/*
+/apps/principais/migrations/*
+/apps/arcondicionados/__pycache__/*
+/apps/arcondicionados/migrations/*
+/apps/tecnicos/__pycache__/*
+/apps/tecnicos/migrations/*
+/apps/servicos/__pycache__/*
+/apps/servicos/migrations/*
+

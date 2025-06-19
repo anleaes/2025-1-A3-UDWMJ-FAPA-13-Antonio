@@ -1,0 +1,27 @@
+@startuml
+
+class Arcondicionado{
+    marca 
+    modelo
+    capacidade
+    tecnologia
+
+}
+class Servico{
+    local
+    descricao
+    arcondicionado
+    tecnico
+
+
+}
+class Tecnico{
+    nome
+    registro
+    avaliacao
+    especialidade
+}
+Servico -- Tecnico
+Servico -- Arcondicionado 
+
+@enduml
