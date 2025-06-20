@@ -17,3 +17,11 @@ def add_arcondicionado(request):
     form = ArcondicionadoForm()
     context['form'] = form
     return render(request, template_name, context)
+
+def list_arcondicionados(request):
+    template_name = 'arcondicionados/list_arcondicionados.html'
+    arcondicionados = Arcondicionado.objects.filter()
+    context = {
+        'arcondicionados': arcondicionados
+    }
+    return render(request, template_name, context)

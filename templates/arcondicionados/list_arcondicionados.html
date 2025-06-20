@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Lista de Arcondicionados - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+  <br />
+  <b>Lista de Arcondicionados</b>
+  <br />
+  <br />
+  <table border="1">
+    <thead>
+      <tr>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Capacidade</th>
+        <th scope="col">Tecnologia</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for arcondicionado in arcondicionados %}
+        <tr>
+          <th>{{ arcondicionado.marca }}</th>
+          <td>{{ arcondicionado.modelo }}</td>
+          <td>{{ arcondicionado.capacidade }}</td>
+          <td>{{ arcondicionado.tecnologia }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
