@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Adicionar Arcondicionado - {{ block.super }}
+{% endblock %}
+
+{% block body %}
+  <br />
+  <b>Cadastro de Arcondicionado</b>
+  <br />
+  <br />
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <label>Marca:</label>
+    <br />
+    {{ form.marca }}
+    <br />
+    <br />
+
+    <label>Modelo:</label>
+    <br />
+    {{ form.modelo }}
+    <br />
+    <br />
+    
+    <label>Capacidade:</label>
+    <br />
+    {{ form.capacidade }}
+    <br />
+    <br />
+
+    <label>Tecnologia:</label>
+    <br />
+    {{ form.tecnologia }}
+    <br />
+    <br />
+
+    <button type="submit">Salvar</button>
+
+  </form>
+{% endblock %}
