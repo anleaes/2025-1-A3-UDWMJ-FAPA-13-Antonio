@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,21 @@
     <link rel="stylesheet" href="{% static 'css/arquivo_com_estilos.css' %}">
     <title>{% block title %}Nome do meu App{% endblock title %}</title>
 </head>
+
 <body>
 
+    <ul>
+        <li><a href="{% url 'arcondicionados:list_arcondicionados' %}">Categorias</a></li>
+        <li><a href="#">Ar-Condicinado</a></li>
+        <li><a href="#">Técnico</a></li>
+        <li><a href="#">Serviços</a></li>
+    </ul>
+
     {% block body %}
-    
+
     {% endblock body %}
-    
+
     <script src="{% static 'js/arquivo_com_javascript.js' %}"></script>
 </body>
+
 </html>
