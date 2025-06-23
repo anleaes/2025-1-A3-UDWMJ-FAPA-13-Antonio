@@ -39,3 +39,10 @@ def edit_arcondicionado(request, id_arcondicionado):
     form = ArcondicionadoForm(instance=arcondicionado)
     context['form'] = form
     return render(request, template_name, context)
+
+def delete_arcondicionado(request, id_arcondicionado):
+    arcondicionado = Arcondicionado.objects.get(id=id_arcondicionado)
+    arcondicionado.delete()
+    return redirect('arcondicionados:list_arcondicionados')
+
+
