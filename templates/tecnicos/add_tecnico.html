@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Adicionar Produto - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+<br />
+<b>Cadastro de Produto</b>
+<br />
+<br />
+<form action="" method="POST" enctype="multipart/form-data"> 
+{% csrf_token %}
+    <label>Nome</label>
+    <br />
+    {{ form.nome }}
+    <br />
+    <br />
+    <label>Registro</label>
+    <br />
+    {{ form.registro}}
+    <br />
+    <br />
+    <label>Avaliacao</label>
+    <br />
+    {{ form.avaliacao}}
+    <br />
+    <br />
+
+    <label>Especialidade</label>
+    <br />
+    {{ form.especialidade }}
+    <br />
+    <button type="submit">Salvar</button>       
+</form>
+
+{% endblock body %}

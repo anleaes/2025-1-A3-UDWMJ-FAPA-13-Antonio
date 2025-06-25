@@ -16,10 +16,9 @@
    
         <a href="{% url 'principais:principal' %}" ><img src="{% static 'img/menu.png' %}" width="200" height="60" /></a>
         <br />
-        <a href="{% url 'arcondicionados:list_arcondicionados' %}"><button onclick="mudarCor()">Arcondicionados</button></a>
-        <a href="#" ><button onclick="alertarMensagem()">Ar-condicinado</button></a>
-        <a href="#" ><button onclick="alertarMensagem()">Técnico</button></a>
-        <a href="#" ><button onclick="alertarMensagem()">Serviços</button></a>
+        <a href="{% url 'arcondicionados:list_arcondicionados' %}"><button onclick="mudarCor()">Arcondicionado</button></a>
+        <a href="{% url 'tecnicos:list_tecnicos' %}" ><button onclick="mudarCor()">Técnico</button></a>
+        <a href="{% url 'servicos:list_servico' %}" ><button onclick="mudarCor()">Serviços</button></a>
         <br />
   
 

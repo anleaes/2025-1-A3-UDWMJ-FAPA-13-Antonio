@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Tecnicos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+<br />
+    <a href="{% url 'tecnicos:add_tecnico' %}">Cadastro de novo tecnico</a>
+<br />
+<br />
+<b>Lista de Tecnicos</b>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Registro</th>
+            <th>Avaliacao</th>
+            <th>Especialidade</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tecnico in tecnicos %}
+            <tr>
+                <td>{{ tecnico.id }}</th>
+                <td>{{ tecnico.nome }}</td>
+                <td>{{ tecnico.registro }}</td>
+                <td>{{ tecnico.avaliacao }}</td>
+                <td>{{ tecnico.especialidade }}</td>
+                <td>
+                    <a href="{% url 'tecnicos:edit_tecnico' tecnico.id %}" >Editar</a>
+                </td>
+                <td>    
+                    <a href="{% url 'tecnicos:delete_tecnico' tecnico.id %}" >Excluir</a>
+                </td>
+            </tr> 
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock body %}

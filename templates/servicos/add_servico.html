@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Adicionar Servico - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+<br />
+<b>Cadastro de Servico</b>
+<br />
+<br />
+<form action="" method="POST" enctype="multipart/form-data"> 
+{% csrf_token %}
+    <label>Local</label>
+    <br />
+    {{ form.local }}
+    <br />
+    <br />
+
+    <label>Descricao</label>
+    <br />
+    {{ form.descricao}}
+    <br />
+    <br />
+
+    <label>Arcondicionado</label>
+    <br />
+    {{ form.arcondicionado}}
+    <br />
+    <br />
+
+    <label>Tecnico</label>
+    <br />
+    {{ form.tecnico }}
+    <br />
+    <br />
+
+    <button type="submit">Salvar</button>       
+</form>
+
+{% endblock body %}

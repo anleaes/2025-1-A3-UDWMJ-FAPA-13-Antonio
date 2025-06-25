@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    Lista de Produtos - {{ block.super }}
+
+{% endblock title %}
+
+{% block body %}
+
+<br />
+    <a href="{% url 'servicos:add_servico' %}">Cadastro de novo servico</a>
+<br />
+<br />
+<b>Lista de servicos</b>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Local</th>
+            <th>Descricao</th>
+            <th>Arcondicionado</th>
+            <th>Tecnico</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for servico in servicos %}
+            <tr>
+                <td>{{ servico.id }}</th>
+                <td>{{ servico.local }}</td>
+                <td>{{ servico.descricao }}</td>
+                <td>{{ servico.arcondicionado }}</td>
+                <td>{{ servico.tecnico }}</td>
+                <td>
+                    <a href="{% url 'servicos:edit_servico' servico.id %}" >Editar</a>
+                </td>
+                <td>    
+                    <a href="{% url 'servicos:delete_servico' servico.id %}" >Excluir</a>
+                </td>
+            </tr> 
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock body %}
