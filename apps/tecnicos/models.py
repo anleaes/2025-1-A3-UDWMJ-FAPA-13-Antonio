@@ -16,5 +16,5 @@ class Tecnico(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.name
+        return f"{self.nome} ({self.especialidade})"
                                

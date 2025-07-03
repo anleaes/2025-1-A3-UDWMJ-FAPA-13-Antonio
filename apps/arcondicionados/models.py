@@ -14,4 +14,4 @@ class Arcondicionado(models.Model):
         ordering =['id']
 
     def __str__(self):
-        return self.modelo
+       return f"{self.marca} ({self.modelo})"
